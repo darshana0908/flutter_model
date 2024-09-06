@@ -14,20 +14,9 @@ class RemoteService {
       List res = jsonDecode(ress.body);
 
       res.map((data) => Post.fromJson(data)).toList();
-      // List.generate(res.length, (index) {
-      //   // Post(
-      //   //     body: res[index]['body'],
-      //   //     id: res[index]['id'],
-      //   //     title: res[index]['title'],
-      //   //     userId: res[index]['userId']);
+   
 
-      //   postList.add(Post(
-      //       body: res[index]['body'],
-      //       id: res[index]['id'],
-      //       title: res[index]['title'],
-      //       userId: res[index]['userId']));
-      //   log(postList[0].id.toString());
-      // });
+   // loop add data to list model
       return res.map((data) {
         print(data);
         return Post.fromJson(data);
